@@ -1,5 +1,5 @@
 %
-%	Einfuehrung
+%	Einführung
 %
 
 \pagebreak
@@ -13,6 +13,8 @@ Cybersecurity, also called information security or IT security, is the practice 
 
 Cybersecurity is an ongoing process because threats and attack vectors are constantly evolving. Organizations and individuals must proactively implement security measures and stay up-to-date on the latest threats.\footnote{See \textit{Gemini (2024)}: What is Cyber Security. \cite{bardCybersec}}
 
+A lot has changed since the first version of the paper, especially regarding the mappings between CIS Controls and NIS2. The changes made it necessary to revisit the experiment and reevaluate the results.\footnote{See \textit{Frank, C. (2024)}: NIS2 and CIS Controls. \cite{previousPaper}}
+
 \subsection{NIS2}
 
 NIS2, which stands for Network and Information Systems Directive II, is the EU's legislative act to strengthen cybersecurity across the European Union. It's essentially an update to the original NIS Directive implemented in 2016.
@@ -24,6 +26,8 @@ Compared to the original directive, NIS2 applies to a broader range of businesse
 It also emphasizes a risk-based approach to cybersecurity. Organizations must identify and assess their security risks and implement appropriate mitigation measures.
 
 NIS2 entered into force on 16 January 2023, and the Member States now have 21 months, until 17 October 2024, to transpose its measures into national law.\footnote{See \textit{Negreiro-Achiaga, M. (2023)}: The NIS2 Directive. \cite{nisBrief}}
+
+As of the time of writing, the German government has just presented a proposal to the legislature to codify NIS2 into national law.\footnote{See \textit{BSI (2025)}: NIS-2-Regierungsentwurf. \cite{presseNis2}}
 
 \subsection{CIS Controls and Benchmarks}
 
@@ -54,17 +58,17 @@ In 2015, Kubernetes reached the 1.0 milestone, and in 2016, it was donated to th
 
 This paper will examine the new NIS2 security standards, compare them to the current CIS controls, and attempt to map them with a focus on using the CSI Benchmarks. Once we've established a helpful relationship, we will evaluate using CSI benchmarks to check Kubernetes clusters for NIS2 compliance. We will also check whether CIS Benchmarks can provide information about the level of compliance for Kubernetes clusters and offer actionable insights into reaching NIS2 compliance for the relevant controls.
 
-To do this, we will perform an Experiment and cross-check the findings of several CIS Benchmarks on a random cluster against manual evaluation.\footnote{See \textit{Genau, L. (2020)}: Ein Experiment in Deiner Abschlussarbeit Durchführen. \cite{expScribbr}}
+To do this, we will perform an Experiment and cross-check the findings of several CIS Benchmarks on a random cluster against manual evaluation.\footnote{See \textit{Genau, L. (2020)}: Ein Experiment in deiner Abschlussarbeit durchführen. \cite{expScribbr}}
 
-The goal is to establish whether CIS Benchmark results can indicate whether a Kubernetes cluster might be NIS2-compliant as a platform.
+The goal is to determine if CIS Benchmark results can indicate whether a Kubernetes cluster is NIS2-compliant as a platform.
 
 \subsection{Gender-neutral Pronouns}
 
-Our society is becoming more open, inclusive, and gender-fluid, and now I think it's time to think about using gender-neutral pronouns in scientific texts, too. Two well-known researchers, Abigail C. Saguy and Juliet A. Williams, both from UCLA, propose to use the singular they/them instead: "The universal singular they is inclusive of people who identify as male, female or nonbinary."\footnote{\textit{Saguy, A. (2020)}: Why We Should All Use They/Them Pronouns. \cite{pronouns}} The aim is to support an inclusive approach in science through gender-neutral language. 
+Our society is becoming more open, inclusive, and gender-fluid, and now I think it's time to think about using gender-neutral pronouns in scientific texts, too. Two well-known researchers, Abigail C. Saguy and Juliet A. Williams, both from UCLA, propose to use the singular they/them instead: "The universal singular they is inclusive of people who identify as male, female, or nonbinary."\footnote{\textit{Saguy, A. (2020)}: Why We Should All Use They/Them Pronouns. \cite{pronouns}} The aim is to support an inclusive approach in science through gender-neutral language. 
 
 In this paper, I'll attempt to follow this suggestion and invite all my readers to do the same for future articles. Thank you!
 
-If you're not sure about the definitions of gender and sex and how to use them, have a look at the definitions\footnote{See \textit{APA (2021)}: Definitions Related to Sexual Orientation. \cite{apaDefinitions}} by the American Psychological Association.
+If you're not sure about the definitions of gender and sex and how to use them, have a look at the definitions by the American Psychological Association.\footnote{See \textit{APA (2021)}: Definitions Related to Sexual Orientation. \cite{apaDefinitions}}
 
 \subsection{Climate Emergency}
 
