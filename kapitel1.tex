@@ -23,9 +23,9 @@ It sets stricter requirements for various sectors to improve security for essent
 
 Compared to the original directive, NIS2 applies to a broader range of businesses and organizations; it recognizes the importance of securing the supply chain and includes measures to address vulnerabilities in third-party vendors and suppliers.
 
-It also emphasizes a risk-based approach to cybersecurity. Organizations must identify and assess their security risks and implement appropriate mitigation measures.
+It also emphasizes a risk-based approach to cybersecurity. Organizations must identify and assess their security risks and implement appropriate mitigation measures. Classical tools from Business Continuity Management, such as Risk Impact Analysis and Business Impact Analysis, are now essential parts of the cybersecurity toolkit.\footnote{See \textit{BSI (2025)}: Business Impact Analysis. \cite{bsiBCM}}
 
-NIS2 entered into force on 16 January 2023, and the Member States now have 21 months, until 17 October 2024, to transpose its measures into national law.\footnote{See \textit{Negreiro-Achiaga, M. (2023)}: The NIS2 Directive. \cite{nisBrief}}
+NIS2 entered into force on 16 January 2023, and the Member States had 21 months, until 17 October 2024, to transpose its measures into national law.\footnote{See \textit{Negreiro-Achiaga, M. (2023)}: The NIS2 Directive. \cite{nisBrief}}
 
 As of the time of writing, the German government has just presented a proposal to the legislature to codify NIS2 into national law.\footnote{See \textit{BSI (2025)}: NIS-2-Regierungsentwurf. \cite{presseNis2}}
 
@@ -43,7 +43,7 @@ Kubernetes, or K8s, is an open-source system designed to automate deploying, sca
 
 Kubernetes helps manage these containers by grouping them logically. This makes it easier to track and manage complex applications with many containers. The original inspiration for Kubernetes came from Google's internal container orchestration system, Borg.\footnote{See \textit{Gemini (2024)}: What is Kubernetes. \cite{bardKubernetes}} 
 
-In 2015, Kubernetes reached the 1.0 milestone, and in 2016, it was donated to the CNCF; the current release of Kubernetes is 1.30.
+In 2015, Kubernetes reached the 1.0 milestone, and in 2016, it was donated to the CNCF; the current release of Kubernetes is 1.33, codenamed Octarine. The cutest release was 1.30, codenamed Uwubernetes.
 
 "For the people who built it, for the people who release it, and for the furries who keep all of our clusters online, we present to you Kubernetes v1.30: Uwubernetes, the cutest release to date."\footnote{\textit{Dsouza, A. (2024)}: Kubernetes 1.30. \cite{uwubernetes}}
 
@@ -56,11 +56,11 @@ In 2015, Kubernetes reached the 1.0 milestone, and in 2016, it was donated to th
 
 \subsection{Research Question \& Method}
 
-This paper will examine the new NIS2 security standards, compare them to the current CIS controls, and attempt to map them with a focus on using the CSI Benchmarks. Once we've established a helpful relationship, we will evaluate using CSI benchmarks to check Kubernetes clusters for NIS2 compliance. We will also check whether CIS Benchmarks can provide information about the level of compliance for Kubernetes clusters and offer actionable insights into reaching NIS2 compliance for the relevant controls.
+This paper will examine the new NIS2 security standards, compare them to the current CIS v8 controls, and attempt to map them with a focus on using the CSI Benchmarks. Once we've established a helpful relationship, we will evaluate using CSI benchmarks to check Kubernetes clusters for NIS2 compliance. We will also check whether CIS Benchmarks can provide information about the level of compliance for Kubernetes clusters and offer actionable insights into reaching NIS2 compliance for the relevant controls.
 
-To do this, we will perform an Experiment and cross-check the findings of several CIS Benchmarks on a random cluster against manual evaluation.\footnote{See \textit{Genau, L. (2020)}: Ein Experiment in deiner Abschlussarbeit durchführen. \cite{expScribbr}}
+To do this, we will perform an Experiment and check the findings of the Kubernetes CIS Benchmarks on a random cluster.\footnote{See \textit{Genau, L. (2020)}: Ein Experiment in deiner Abschlussarbeit durchführen. \cite{expScribbr}}
 
-The goal is to determine if CIS Benchmark results can indicate whether a Kubernetes cluster is NIS2-compliant as a platform.
+The goal of this paper is to determine if CIS Kubernetes Benchmark results can indicate whether a Kubernetes cluster is NIS2-compliant on the platform level.
 
 \subsection{Gender-neutral Pronouns}
 
