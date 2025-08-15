@@ -101,21 +101,3 @@ To mitigate these, the CIS Benchmarks provide a security baseline for enterprise
 
 There are CIS Benchmarks tailored to the currently available and supported version of Kubernetes and the major hosted versions, such as the Azure Kubernetes Engine.
 
-\subsection{CIS Benchmarks on RKE2}
-
-\subsection{CIS Kubernetes Benchmark Results}
-
-We'll use the Rancher CIS Scans from above against a simple downstream RKE2 Kubernetes cluster; the Kubernetes Version is v1.28.12+rke2r1, and the CIS Scans application version is v5.3.0.
-
-Running CIS profile 1.8 against our cluster, we receive the following results:
-
-\begin{figure}[H]
-\centering
-\caption {CIS Scans Results RKE2}
-\includegraphics[width=\linewidth]{images/cis-scans-3.png}
-\label{fig:cisRKE2}
-\end{figure}
-
-Compared to the results from an AKS downstream cluster above, we can see that there are many more failures and warnings. The difference between these two types of clusters, even though they are both Kubernetes v1.28 clusters, is that AKS is a hosted version of Kubernetes. In a hosted version of Kubernetes, the hosting entity provides the control plane, in this case, Microsoft Azure. An RKE2 cluster, however, does include the Kubernetes control plane and thus has a much higher attack surface and many more configuration options.
-
-In the next chapter, we will look at some failures and warnings and possible mitigation steps.
