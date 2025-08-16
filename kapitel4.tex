@@ -114,15 +114,13 @@ Restricting access to critical configuration files and enabling audit logging is
 
 \subsection{Implications for DORA compliance}
 
+To support DORA compliance, CIS Security released in April 2025 a mapping for the CIS Controls v8.1 and DORA.\footnote{\textit{CIS (2025)}: CIS Controls v8.1 Mapping to DORA. \cite{cisMapDora}}
+
 \subsection{Overall Compliance and Risk Mitigation}
 
-For the RKE2 installation, we can use the RKE2 hardening guide to enable full CIS Benchmark compliance. By specifying a CIS profile, the Kubernetes installation will be modified from its default to fulfill the CIS Benchmark and support CIS and NIS2 compliance.
-
-Once the profile is selected, SUSE self-certifies RKE2 as CIS Benchmark compliant, and all CIS Benchmark tests will be passed.
+We have seen Microsoft's Azure Kubernetes Engine pass the CIS Benchmark. The other major hosted versions of Kubernetes, Google's Kubernetes Engine (GKE) and Amazon's Elastic Kubernetes Service (EKS), also offer CIS Compliance to their customers.
 
 Other Kubernetes distributions, such as Red Hat's OpenShift, also offer CIS compliance. 
-
-We have already seen Microsoft's Azure Kubernetes Engine pass the CIS Benchmark. The other major hosted versions of Kubernetes, Google's Kubernetes Engine (GKE) and Amazon's Elastic Kubernetes Service (EKS), also offer CIS Compliance to their customers.
 
 Ensuring that an IT system, such as a Kubernetes cluster, scores a passing grade on the CIS Benchmarks supports basic cyber hygiene and should be part of the IT Security Policy.
 
