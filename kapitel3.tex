@@ -13,7 +13,7 @@ To support NIS2 compliance, CISecurity released in April 2025 a mapping for the 
 
 CISecurity uses its in-house methodology to map the individual provisions of a given compliance directive, in this case NIS2, to the individual CIS Controls. The mapping sheet covers all CIS Controls and consists of directly mapped entries and unmapped entries from either direction.
 
-The directive items in the mapping refer directly to the current NIS2 Technical Implementation Guidance and can be easily verified in either direction.\footnote{See \textit{ENISA (2025)}: Technical Implementation Guidance. \cite{nis2}}
+The directive items in the mapping refer directly to the current NIS2 Technical Implementation Guidance and can be easily verified in either direction.\footnote{See \textit{ENISA (2025)}: Technical Implementation Guidance. \cite{enisaTech}}
 
 \subsection{CIS Benchmarks on AKS}
 
@@ -21,63 +21,65 @@ As a first step, we extract the CIS Controls that are covered in the Benchmark f
 
 \begin{table}[ht]
   \caption{CIS Controls in AKS Benchmark v1.7}
-    \begin{tabular}{| l | l |}
+    \begin{tabular}{| l | l | l |}
     \hline
-    ID & Description \\
+    ID & Auto & Description \\
     \hline\hline
-    2.5 & Allowlist Authorized Software \\
+    2.5 & N & Allowlist Authorized Software \\
     \hline
-    3.3 & Configure Data Access Control Lists \\
+    3.3 & Y & Configure Data Access Control Lists \\
     \hline
-    3.10 & Encrypt Sensitive Data in Transit \\
+    3.10 & Y & Encrypt Sensitive Data in Transit \\
     \hline
-    3.11 & Encrypt Sensitive Data at Rest \\
+    3.11 & Y & Encrypt Sensitive Data at Rest \\
     \hline
-    3.12 & Segment Data Processing and Storage Based on Sensitivity \\
+    3.12 & Y & Segment Data Processing and Storage Based on Sensitivity \\
     \hline
-    4.1 & Establish and Maintain a Secure Configuration Process \\
+    4.1 & Y & Establish and Maintain a Secure Configuration Process \\
     \hline
-    4.4 & Implement and Manage a Firewall on Servers \\
+    4.4 & Y & Implement and Manage a Firewall on Servers \\
     \hline
-    4.5 & Implement and Manage a Firewall on End-User Devices \\
+    4.5 & Y & Implement and Manage a Firewall on End-User Devices \\
     \hline
-    4.6 & Securely Manage Enterprise Assets and Software \\
+    4.6 & N & Securely Manage Enterprise Assets and Software \\
     \hline
-    4.7 & Manage Default Accounts on Enterprise Assets and Software \\
+    4.7 & Y & Manage Default Accounts on Enterprise Assets and Software \\
     \hline
-    5 & Account Management \\
+    5 & N & Account Management \\
     \hline
-    5.4 & Restrict Administrator Privileges to Dedicated Administrator Accounts \\
+    5.4 & Y & Restrict Administrator Privileges to Dedicated Administrator Accounts \\
     \hline
-    6 & Access Control Management \\
+    5.6 & N & Centralizes Account Management \\
     \hline
-    6.8 & Define and Maintain Role-Based Access Control \\
+    6 & Y & Access Control Management \\
     \hline
-    7.5 & Perform Automated Vulnerability Scans of Internal Enterprise Assets \\
+    6.8 & N & Define and Maintain Role-Based Access Control \\
     \hline
-    7.6 & Perform Automated Vulnerability Scans of External  Enterprise Assets \\
+    7.5 & Y & Perform Automated Vulnerability Scans of Internal Enterprise Assets \\
     \hline
-    8.1 & Establish and Maintain an Audit Log Management Process \\
+    7.6 & Y & Perform Automated Vulnerability Scans of External  Enterprise Assets \\
+     \hline
+    8.1 & N & Establish and Maintain an Audit Log Management Process \\
     \hline
-    8.2 & Collect Audit Logs \\
+    8.2 & Y & Collect Audit Logs \\
     \hline
-    8.5 & Collect Detailed Audit Logs \\
+    8.5 & Y & Collect Detailed Audit Logs \\
     \hline
-    13.4 & Perform Traffic Filtering Between Network Segments \\
+    13.4 & Y & Perform Traffic Filtering Between Network Segments \\
     \hline
-    16.5 & Use Up-to-Date and Trusted Third-Party Software Components \\
+    16.5 & N & Use Up-to-Date and Trusted Third-Party Software Components \\
     \hline
     \end{tabular}%
   \label{tab:aksBenchmark}%
 \end{table}%
 
-The CIS Benchmark tools can automate some of the tests for these CIS Controls and thus can automate regular compliance checks.
-
 \pagebreak
+
+The CIS Benchmark tools can automate some of the tests for these CIS Controls and thus can automate regular compliance checks.
 
 \subsection{CIS AKS Benchmarks Mappings}
 
-From the controls covered by the benchmark, we extract the ones that have direct NIS2 implementation mappings:
+From the controls covered by the Benchmark, we extract the ones that have direct NIS2 implementation mappings.
 
 \begin{table}[ht]
   \caption{NIS2 Mappings in AKS Benchmark}
@@ -117,21 +119,9 @@ From the controls covered by the benchmark, we extract the ones that have direct
   \label{tab:aksMapping}%
 \end{table}%
 
+Counting the number of automated tests, CIS Control 04 emerges as the most prominent aspect of the CIS Benchmark for NIS2 compliance.
+
 \pagebreak
-
-\subsection{NIS2 Article 21}
-
-The NIS2 directive itself is a legal document organized into Chapters and Articles. It has a pan-European scope and targets critical businesses. NIS2 applies to many entities that provide essential services to the European economy and society, such as Operators of Essential Services (OES) and Digital Service Providers (DSPs). While NIS2 primarily targets medium and large enterprises, smaller entities may still be affected, depending on the services they provide.
-
-As we've seen, much of the content concerns reporting requirements and EU-wide cooperation and institutions, which we will not analyze further in this paper.\footnote{See \textit{EU (2022)}: NIS2 Directive. \cite{nis2}}
-
-Article 21, however, defines the required Cybersecurity risk-management measures for critical infrastructure. In paragraph 2, point (g), NIS2 calls for basic cyber hygiene practices and cybersecurity training.
-
-Any entity covered by the directive must, thus, have an IT Security Policy to implement basic cyber hygiene.\footnote{See \textit{NIS 2 Compliant.org (2024)}: List of Policies Required by NIS 2 Directive. \cite{nisPols}} To strengthen their security postures, entities could rely on one of the major frameworks and standards, such as the NIST SP 800 series, ISO/IEC 27001, Mitre Att\&ck, or CIS Controls.\footnote{See \textit{NIS 2 Compliant.org (2024)}: Requirements Checklist for NIS 2. \cite{nisReqs}}
-
-The directive does not mandate whether an entity chooses one of these frameworks or creates its policies. It also does not favor or champion any of the mentioned frameworks.
-
-For this paper, we will focus on CIS Controls and the baselines provided by the CIS Benchmarks to fulfill Article 21's requirements.
 
 \subsection{CIS Control 04}
 
@@ -179,21 +169,11 @@ and Software
     \item Separate Enterprise Workspaces on Mobile End-User Devices\footnote{See \textit{CIS (2024)}: Critical Security Controls v8 - Control 04. \cite{cisControls}}
 \end{enumerate}
 
-Control 4.1 strongly emphasizes the configuration process, as the default configuration for enterprise software is typically geared toward ease of deployment and use rather than security. This is where the CIS Benchmarks come into play.
+Control 4.1 strongly emphasizes the configuration process, as the default configuration for enterprise software is typically geared toward ease of deployment and use rather than security.
 
-\subsection{NIS2 Article 21 and CIS Control 04}
+CIS Control 4.1 maps to the NIS2 implementation guidance 6.3, which clearly states that maintaining a Secure Configuration Process is essential.
 
-Control 4.1 is the prime candidate to support and evaluate NIS2 Article 21 2(g) as it covers basic cyber hygiene and IT security policy.
-
-The requirements in Article 21 are much broader than those of CIS Control 04, but a secure configuration process is a fundamental element.
-
-Fulfilling CIS Control 04 does not imply compliance with Article 21, but noncompliance with CIS Control 04 does imply noncompliance with Article 21.
-
-The CIS Benchmarks can indicate whether an IT system is potentially NIS2 compliant. Evaluating and running the CIS Benchmarks regularly will support NIS2 compliance checking and defense against cyber attacks.
-
-\subsection{CIS Benchmarks and CIS Control 04}
-
-Maintaining a Secure Configuration Process is important. Leaving default configurations unchecked might result in some of these security risks:
+Leaving default configurations unchecked might result in some of these security risks:
 
 \begin{itemize}
     \item Exposed Services and Ports
@@ -205,6 +185,22 @@ Maintaining a Secure Configuration Process is important. Leaving default configu
 
 To mitigate these, the CIS Benchmarks provide a security baseline for enterprise software, such as Kubernetes, covering all aspects of CIS Control 4.1 and a matching IT Security Policy.\footnote{See \textit{CIS (2024)}: CIS Benchmarks List. \cite{cisBenchmarks}}
 
-There are CIS Benchmarks tailored to the currently available and supported version of Kubernetes and the major hosted versions, such as the Azure Kubernetes Engine.
+\subsection{NIS2 Article 21}
 
-In the next chapter, we will conduct our experiment and examine the benchmark results from an AKS cluster.
+The NIS2 directive itself is a legal document organized into Chapters and Articles. It has a pan-European scope and targets critical businesses. NIS2 applies to many entities that provide essential services to the European economy and society, such as Operators of Essential Services (OES) and Digital Service Providers (DSPs). While NIS2 primarily targets medium and large enterprises, smaller entities may still be affected, depending on the services they provide.
+
+As we've seen, much of the content concerns reporting requirements and EU-wide cooperation and institutions, which we will not analyze further in this paper.\footnote{See \textit{EU (2022)}: NIS2 Directive. \cite{nis2}}
+
+Article 21, however, defines the required Cybersecurity risk-management measures for critical infrastructure. In paragraph 2, point (g), NIS2 calls for basic cyber hygiene practices and cybersecurity training.
+
+Any entity covered by the directive must, thus, have an IT Security Policy to implement basic cyber hygiene.\footnote{See \textit{NIS 2 Compliant.org (2024)}: List of Policies Required by NIS 2 Directive. \cite{nisPols}} To strengthen their security postures, entities could rely on one of the major frameworks and standards, such as the NIST SP 800 series, ISO/IEC 27001, Mitre Att\&ck, or CIS Controls.\footnote{See \textit{NIS 2 Compliant.org (2024)}: Requirements Checklist for NIS 2. \cite{nisReqs}}
+
+CIS Control 4.1, as linked to the implementation guidance 6.3, is the prime candidate to support and evaluate NIS2 Article 21 2(g) as it covers basic cyber hygiene and IT security policy.
+
+The requirements in Article 21 are much broader than those of CIS Control 04, but a secure configuration process is a fundamental element.
+
+Fulfilling CIS Control 04 does not imply compliance with Article 21, but noncompliance with CIS Control 04 does imply noncompliance with Article 21.
+
+The CIS Benchmarks can thus indicate whether an IT system is potentially NIS2 compliant. Evaluating and running the CIS Benchmarks regularly will support NIS2 compliance checking and defense against cyber attacks.
+
+In the next chapter, we will conduct our experiment and validate our findings by examining the benchmark results from an AKS cluster.
