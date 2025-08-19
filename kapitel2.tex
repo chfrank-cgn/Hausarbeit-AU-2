@@ -115,7 +115,9 @@ To validate the compliance of Kubernetes clusters with a selected CIS Benchmark,
 
 For Kubernetes, the most common way of running kube-bench is to create a job on the cluster that needs to be analyzed.\footnote{See \textit{Aqua Securites (2025)}: Running kube-bench. \cite{kubeBench}}
 
-\begin{lstlisting}[caption=Running kube-bench, frame=single, basicstyle=\ttfamily]
+\pagebreak
+
+\begin{lstlisting}[caption=Kube-bench Job, frame=single, basicstyle=\ttfamily]
 apiVersion: batch/v1
 kind: Job
 metadata:
