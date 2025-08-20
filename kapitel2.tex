@@ -56,12 +56,6 @@ Key features of the EU Cyber Solidarity Act:
 
 The European Cybersecurity Shield, a component of the Act, is a pilot initiative involving three cross-border Security Operations Center consortia. Launched in November 2022, this pilot project aims to test and refine the concept of a networked system of SOCs for early threat detection and sharing.\footnote{See \textit{EU (2024)}: Cyber Solidarity Act. \cite{cyberSol}}
 
-\subsubsection{EU Certification Framework}
-
-The EU Cybersecurity Act provides the foundation for establishing an EU-wide cybersecurity certification framework, with ENISA playing a central role in its development and implementation. This framework will offer a standardized approach to assessing the cybersecurity of products and services, enhancing consumer confidence, and protecting businesses from cyber threats.
-
-At the time of writing, there is no official certification program yet; however, various commercial certification options exist.
-
 \subsection{Bundesamt für Sicherheit in der Informationstechnik}
 
 The BSI in Germany refers to the Bundesamt für Sicherheit in der Informationstechnik (Federal Office for Information Security). It's Germany's national cybersecurity authority and was established in 1991.
@@ -70,7 +64,7 @@ The BSI is headquartered in Bonn and operates under the Federal Ministry of the 
 
 Among other things, the current draft bill provides for an amendment to the BSI Act (BSIG) and an expansion of the group of regulated organizations to include the categories of important and particularly important institutions.\footnote{See \textit{BSI (2025)}: NIS-2-Regierungsentwurf. \cite{presseNis2}}
 
-With this expansion, the BSI will in the future supervise around 29,500 institutions that will be subject to new legal obligations in the area of IT security.
+In its new role, the BSI will in the future supervise around 29,500 institutions that will be subject to new legal obligations in the area of IT security.
 
 \subsection{Center for Internet Security}
 
@@ -80,7 +74,7 @@ CISecurity is an acronym for the Center for Internet Security. It's a non-profit
 
 The Center for Internet Security was founded 20 years ago in Washington, D.C., in response to increased cyberattacks. It has established itself as the go-to resource for computer security, but unlike ENISA, CISecurity is not a government organization.
 
-Its funding comes from various government and non-profit grant programs designed to improve the overall cybersecurity posture of the U.S., and through the sale of various cybersecurity best practices tools and resources, such as CIS SecureSuite Membership and CIS Hardened Images, and cybersecurity services like CIS Endpoint Security Services.
+Its funding comes from various government and non-profit grant programs designed to improve the overall cybersecurity posture of the U.S., as well as through the sale of various cybersecurity best practices tools and resources, such as CIS SecureSuite Membership and CIS Hardened Images, and cybersecurity services like CIS Endpoint Security Services.
 
 \subsubsection{CIS Controls}
 
@@ -95,6 +89,8 @@ CIS Controls are organized into Implementation Groups:
 \end{itemize}
 
 Implementation groups are cumulative; i.e., to implement IG2, you would also need to implement IG1.
+
+Entities in the particularly important category will most likely need to implement IG3.
 
 The CIS Controls are a standalone toolset. There are mappings available for other security and compliance requirements, such as NIS2, DORA, ISO 27001, NIST CSF, or NIST SP 800-53.\footnote{See \textit{CIS (2025)}: Critical Controls Mappings. \cite{cisMappings}}
 
@@ -134,8 +130,6 @@ spec:
       restartPolicy: Never            
 \end{lstlisting}
 
-Note the selection of the applicable CIS Benchmark definition in the kube-bench command line.
-
-After the job has finished, the CIS Benchmarks results will be available within the pod logs.
+After the job has finished, the CIS Benchmarks results will become available within the pod logs.
 
 In the next chapter, we will examine the mapping between CIS Controls and NIS2 and then break it down to match elements from the CIS Kubernetes Benchmark.

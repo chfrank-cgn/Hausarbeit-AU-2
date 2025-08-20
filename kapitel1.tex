@@ -13,6 +13,18 @@ Cybersecurity, also called information security or IT security, is the practice 
 
 Cybersecurity is an ongoing process because threats and attack vectors are constantly evolving. Organizations and individuals must proactively implement security measures and stay up-to-date on the latest threats.\footnote{See \textit{Gemini (2024)}: What is Cyber Security. \cite{bardCybersec}}
 
+The CIA-Triad defines the key components of Information Security:
+
+\begin{itemize}
+    \item Confidentiality
+    \item Integrity
+    \item Availability\footnote{See \textit{Washington University (2025)}: The CIA Triad. \cite{ciaTriad}} 
+\end{itemize}
+
+To address the availability of public infrastructure, our government has introduced the KRITIS designation, expanded the coverage of the BSI Act, and introduced the KRITIS-DachG.\footnote {See \textit{BSI (2024)}: What are Critical Infrastructures. \cite{whatKritis}}
+
+On a European level, NIS2 codifies this.
+
 A lot has changed since the first version of the paper, especially regarding the mappings between CIS Controls and NIS2. The changes made it necessary to revisit the experiment and reevaluate the results.\footnote{See \textit{Frank, C. (2024)}: NIS2 and CIS Controls. \cite{previousPaper}}
 
 \subsection{NIS2}
@@ -58,7 +70,7 @@ In 2015, Kubernetes reached the 1.0 milestone, and in 2016, it was donated to th
 
 This paper will examine the new NIS2 security standards, compare them to the current CIS v8 controls, and attempt to map them with a focus on using the CSI Benchmarks. Once we've established a helpful relationship, we will evaluate using CSI benchmarks to check Kubernetes clusters for NIS2 compliance. We will also check whether CIS Benchmarks can provide information about the level of compliance for Kubernetes clusters and offer actionable insights into reaching NIS2 compliance for the relevant controls.
 
-To do this, we will perform an Experiment and check the findings of the Kubernetes CIS Benchmarks on a random cluster.\footnote{See \textit{Genau, L. (2020)}: Ein Experiment in deiner Abschlussarbeit durchführen. \cite{expScribbr}}
+To do this, we will perform an Experiment and check the findings of the Kubernetes CIS Benchmarks on a generic Kubernetes cluster.\footnote{See \textit{Genau, L. (2020)}: Ein Experiment in deiner Abschlussarbeit durchführen. \cite{expScribbr}} For this experiment, we will select Microsoft's Azure Kubernetes Service (AKS) as the target Kubernetes implementation.
 
 The goal of this paper is to determine if CIS Kubernetes Benchmark results can indicate whether a Kubernetes cluster is NIS2-compliant on the platform level.
 
